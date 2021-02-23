@@ -5,14 +5,14 @@
 	  <article class="media">
 	     <figure class="media-left">
 		   <p class="image is-64x64">
-		     <img src="https://bulma.io/images/placeholder/64x64.png" alt="">
+		     <%= gravatar_image_tag(current_user.email, size: 64, alt: current_user.name)%>
 			</p>
 		</figure>
 		  <div class="media-content">
 		    <div class="content">
 			  <p>
-			    <strong><%= tweet.user.name %></strong>
-		        <small><%= tweet.user.username %></small>
+			    <strong><%= current_user.name %></strong>
+		        <small><%= current_user.username %></small>
 			  </p>
 		    </div>
 		  </div>
